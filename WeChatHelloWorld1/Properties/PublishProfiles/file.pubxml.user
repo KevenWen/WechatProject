@@ -12,14 +12,29 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>03/15/2019 16:17:14</publishTime>
     </File>
+    <File Include="bin/BinaryFormatter.dll">
+      <publishTime>12/19/2017 16:47:18</publishTime>
+    </File>
+    <File Include="bin/Enyim.Caching.dll">
+      <publishTime>07/28/2011 13:38:44</publishTime>
+    </File>
+    <File Include="bin/Enyim.Caching.Web.dll">
+      <publishTime>05/01/2012 15:34:58</publishTime>
+    </File>
+    <File Include="bin/Membase.dll">
+      <publishTime>07/28/2011 13:38:44</publishTime>
+    </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>03/15/2019 16:17:16</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>03/15/2019 16:17:16</publishTime>
     </File>
+    <File Include="bin/Microsoft.Win32.Primitives.dll">
+      <publishTime>11/05/2016 04:55:32</publishTime>
+    </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>03/15/2019 16:17:17</publishTime>
+      <publishTime>11/27/2018 18:07:34</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>03/15/2019 16:17:16</publishTime>
@@ -57,6 +72,84 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
       <publishTime>03/15/2019 16:17:16</publishTime>
     </File>
+    <File Include="bin/Senparc.CO2NET.APM.dll">
+      <publishTime>01/29/2019 05:19:32</publishTime>
+    </File>
+    <File Include="bin/Senparc.CO2NET.Cache.Memcached.dll">
+      <publishTime>01/22/2019 16:46:20</publishTime>
+    </File>
+    <File Include="bin/Senparc.CO2NET.Cache.Redis.dll">
+      <publishTime>01/22/2019 16:46:18</publishTime>
+    </File>
+    <File Include="bin/Senparc.CO2NET.Cache.Redis.RedLock.dll">
+      <publishTime>01/02/2019 11:31:00</publishTime>
+    </File>
+    <File Include="bin/Senparc.CO2NET.dll">
+      <publishTime>01/22/2019 16:46:06</publishTime>
+    </File>
+    <File Include="bin/Senparc.NeuChar.dll">
+      <publishTime>03/30/2019 01:23:56</publishTime>
+    </File>
+    <File Include="bin/Senparc.Weixin.dll">
+      <publishTime>03/30/2019 02:47:48</publishTime>
+    </File>
+    <File Include="bin/Senparc.Weixin.MP.dll">
+      <publishTime>04/19/2019 15:08:55</publishTime>
+    </File>
+    <File Include="bin/Senparc.Weixin.Open.dll">
+      <publishTime>03/30/2019 02:48:28</publishTime>
+    </File>
+    <File Include="bin/Senparc.Weixin.Work.dll">
+      <publishTime>03/20/2019 18:14:48</publishTime>
+    </File>
+    <File Include="bin/StackExchange.Redis.dll">
+      <publishTime>08/01/2017 12:19:14</publishTime>
+    </File>
+    <File Include="bin/System.AppContext.dll">
+      <publishTime>11/05/2016 04:55:34</publishTime>
+    </File>
+    <File Include="bin/System.Console.dll">
+      <publishTime>11/05/2016 04:55:48</publishTime>
+    </File>
+    <File Include="bin/System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>11/05/2016 04:55:52</publishTime>
+    </File>
+    <File Include="bin/System.Globalization.Calendars.dll">
+      <publishTime>11/05/2016 04:56:02</publishTime>
+    </File>
+    <File Include="bin/System.IO.Compression.dll">
+      <publishTime>11/05/2016 04:56:08</publishTime>
+    </File>
+    <File Include="bin/System.IO.Compression.ZipFile.dll">
+      <publishTime>11/05/2016 04:56:04</publishTime>
+    </File>
+    <File Include="bin/System.IO.FileSystem.dll">
+      <publishTime>11/05/2016 04:56:08</publishTime>
+    </File>
+    <File Include="bin/System.IO.FileSystem.Primitives.dll">
+      <publishTime>11/05/2016 04:56:08</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>11/05/2016 04:56:30</publishTime>
+    </File>
+    <File Include="bin/System.Net.Sockets.dll">
+      <publishTime>11/05/2016 04:56:34</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.InteropServices.RuntimeInformation.dll">
+      <publishTime>11/05/2016 04:57:00</publishTime>
+    </File>
+    <File Include="bin/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>11/05/2016 04:57:14</publishTime>
+    </File>
+    <File Include="bin/System.Security.Cryptography.Encoding.dll">
+      <publishTime>11/05/2016 04:57:08</publishTime>
+    </File>
+    <File Include="bin/System.Security.Cryptography.Primitives.dll">
+      <publishTime>11/05/2016 04:57:18</publishTime>
+    </File>
+    <File Include="bin/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>11/05/2016 04:57:18</publishTime>
+    </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>03/15/2019 16:17:16</publishTime>
     </File>
@@ -82,7 +175,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/15/2019 16:17:17</publishTime>
     </File>
     <File Include="bin/WeChatHelloWorld1.dll">
-      <publishTime>03/29/2019 12:46:58</publishTime>
+      <publishTime>04/19/2019 15:08:59</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
       <publishTime>03/15/2019 16:17:19</publishTime>
@@ -112,7 +205,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/15/2019 16:17:17</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>03/15/2019 16:17:17</publishTime>
+      <publishTime>04/12/2019 18:17:35</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>03/15/2019 16:17:20</publishTime>
@@ -178,7 +271,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/15/2019 16:17:21</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/25/2019 11:25:22</publishTime>
+      <publishTime>04/19/2019 15:08:59</publishTime>
     </File>
   </ItemGroup>
 </Project>

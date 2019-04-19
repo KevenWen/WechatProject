@@ -1,27 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
-using System.Web.SessionState;
-using System.Web.Security;
 using System.Xml;
-using System.Net.Http;
-using System.Threading.Tasks;
+using System.Web.Security;
 using System.Net;
+using System.Text;
 using Newtonsoft.Json;
+//using Senparc.Weixin.Work.Containers;
+//using Senparc.Weixin.Work.Entities.Menu;
+using Senparc.Weixin.MP.Containers;
+using Senparc.Weixin.MP.Entities.Menu;
+using Senparc.NeuChar;
+using Senparc.Weixin.MP.CommonAPIs;
+using Senparc.Weixin;
 
 namespace WeChatHelloWorld1.Controllers
 {
     public class WXController : Controller
     {
+        public static readonly string Token = Config.SenparcWeixinSetting.Token;//与微信公众账号后台的Token设置保持一致，区分大小写。
+        public static readonly string EncodingAESKey = Config.SenparcWeixinSetting.EncodingAESKey;//与微信公众账号后台的EncodingAESKey设置保持一致，区分大小写。
+        public static readonly string CorpId = Config.SenparcWeixinSetting.WeixinCorpId;
+        public static readonly string AppId = Config.SenparcWeixinSetting.WeixinAppId;//与微信公众账号后台的AppId设置保持一致，区分大小写。
+        public static readonly string AppSecret = Config.SenparcWeixinSetting.WeixinAppSecret;
+
         // GET: WX
         public ActionResult Index(string echoStr, string signature, string timestamp, string nonce)
         {
-            string WeiXinToken = "zhousheQWER^^&&*";//要和你微信公众平台设置的保持一致          
+            string WeiXinToken = "Hightch.Wu@quest.com";//要和你微信公众平台设置的保持一致          
 
             if (CheckSignature(WeiXinToken, signature, timestamp, nonce))
             {
@@ -63,11 +70,17 @@ namespace WeChatHelloWorld1.Controllers
             return View();
         }
 
+        public ActionResult TestButton()
+        {
+            CreateMenuWithButtonGroup();
+            return Content("create ok");
+        }
+
 
         [HttpPost]
         public ActionResult Index()
         {
-            string postString = string.Empty; 
+            string postString = string.Empty;
             XmlDocument doc = new XmlDocument();
             doc.Load(Request.InputStream);
             return Content(TextHandle(doc));
@@ -102,16 +115,47 @@ namespace WeChatHelloWorld1.Controllers
                     "Going to remove Menu.");
                 DeleteMenu();
             }
+            else if (Content.InnerText == "Order")
+            {
+                responseContent = string.Format(Message_Text,
+                    FromUserName.InnerText,
+                    ToUserName.InnerText,
+                    DateTime.Now.Ticks,
+                    CreateMenuWithButtonGroup());
+            }
             else if (Content != null)
-                {
-                    responseContent = string.Format(Message_Text,
-                        FromUserName.InnerText,
-                        ToUserName.InnerText,
-                        DateTime.Now.Ticks,
-                        "您输入的内容为：" + Content.InnerText);
-                 }
+            {
+                responseContent = string.Format(Message_Text,
+                    FromUserName.InnerText,
+                    ToUserName.InnerText,
+                    DateTime.Now.Ticks,
+                    "您输入的内容为：" + Content.InnerText);
+            }
             return responseContent;
         }
+
+        private string CreateMenuWithButtonGroup()
+        {
+            try
+            {
+                var accessToken = AccessTokenContainer.TryGetAccessToken(AppId, AppSecret);
+                ButtonGroup bg = new ButtonGroup();
+                // 添加 Order 菜单
+                bg.button.Add(new SingleClickButton()
+                {
+                    name = "Order",
+                    key = "OrderClick",
+                    type = MenuButtonType.click.ToString(), //默认已经设为此类型，这里只作为演示
+                });
+                var result = CommonApi.CreateMenu(accessToken, bg);
+                return result.ToString();
+            }
+            catch (Exception e)
+            {
+                return e.StackTrace.ToString();
+            }
+        }
+
         /// <summary>
         /// 普通文本消息
         /// </summary>
@@ -224,8 +268,8 @@ namespace WeChatHelloWorld1.Controllers
         public static string get_accessToken()
         {
             string grant_type = "client_credential";
-            string appid = "wx51ed2c8e378add26";//你的appid
-            string secret = "6b1baff3582c1da0c391ff145438b1bc";//你的secret
+            string appid = "wx950ef0bc651572ce";//你的appid
+            string secret = "8f8dc23f7dc4ae67f69a892dc6787218";//你的secret
             string tokenUrl = string.Format("https://api.weixin.qq.com/cgi-bin/token?grant_type={0}&appid={1}&secret={2}", grant_type, appid, secret);
             //提供向 URI 标识的资源发送数据和从 URI 标识的资源接收数据的公共方法，
             //WebClient 类提供向 URI 标识的任何本地、Intranet 或 Internet 资源发送数据以及从这些资源接收数据的公共方法

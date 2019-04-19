@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Senparc.CO2NET.Cache.Memcached</name>
+    </assembly>
+    <members>
+        <member name="P:Senparc.CO2NET.Cache.Memcached.MemcachedObjectCacheStrategy.StoreKey">
+            <summary>
+            <para>是否需要储存所有的缓存键</para>
+            <para>工作原理：由于 Enyim.Caching 不支持遍历缓存键，因此当前类扩展了对所有缓存键同步储存的功能，开启后，将可以使用 GetAll() 和 Count() 方法。</para>
+            <para>注意：1、由于储存和同步过程会产生性能消耗，在极低延时的需求下请谨慎使用！</para>
+            <para>2、关闭期间的所有 Key 将不会同步，因此请在项目启动的第一时间决定是否启用，以免出现只记录部分 Key 的情况！</para>
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Senparc.CO2NET.Cache.Memcached.MemcachedObjectCacheStrategy.RegisterServerList(System.Collections.Generic.Dictionary{System.String,System.Int32})" -->
+        <member name="M:Senparc.CO2NET.Cache.Memcached.MemcachedObjectCacheStrategy.RegisterServerList(System.String)">
+            <summary>
+            注册列表
+            </summary>
+            <param name="configurationString">连接字符串</param>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Memcached.MemcachedObjectCacheStrategy.#ctor">
+            <summary>
+            LocalCacheStrategy的构造函数
+            </summary>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Memcached.MemcachedObjectCacheStrategy.GetKeyStoreKey(Senparc.CO2NET.Cache.BaseCacheStrategy)">
+            <summary>
+            获取储存Keys信息的缓存键
+            </summary>
+            <param name="cacheStrategy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Memcached.MemcachedObjectCacheStrategy.TryGet(System.String,System.Object@,System.Boolean)">
+            <summary>
+            Cache.TryGet(key, out value);
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Memcached.Register.RegisterCacheMemcached(Senparc.CO2NET.RegisterServices.IRegisterService,System.Collections.Generic.Dictionary{System.String,System.Int32},System.Func{System.Collections.Generic.Dictionary{System.String,System.Int32},Senparc.CO2NET.Cache.IBaseObjectCacheStrategy})">
+            <summary>
+            注册 Memcached 缓存信息
+            </summary>
+            <param name="registerService">RegisterService</param>
+            <param name="memcachedConfig">memcached连接字符串列表</param>
+            <param name="memcachedObjectCacheStrategyInstance">缓存策略的委托，第一个参数为 memcachedConfig</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Memcached.Register.SetConfigurationOption(System.String)">
+            <summary>
+            设置连接信息（不立即启用）
+            </summary>
+            <param name="redisConfigurationString"></param>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Memcached.Register.UseMemcachedNow">
+            <summary>
+            立即使用 Memcached 缓存
+            </summary>
+        </member>
+    </members>
+</doc>
