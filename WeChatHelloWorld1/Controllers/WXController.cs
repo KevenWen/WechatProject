@@ -21,7 +21,7 @@ namespace WeChatHelloWorld1.Controllers
         // GET: WX
         public ActionResult Index(string echoStr, string signature, string timestamp, string nonce)
         {
-            string WeiXinToken = "zhousheQWER^^&&*";//要和你微信公众平台设置的保持一致          
+            string WeiXinToken = "zhousheQWER^^&&*";//要和你微信公众平台设置的保持一致           
 
             if (CheckSignature(WeiXinToken, signature, timestamp, nonce))
             {
