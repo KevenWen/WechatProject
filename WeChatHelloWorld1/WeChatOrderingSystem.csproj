@@ -248,6 +248,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\WXController.cs" />
+    <Compile Include="CustomMessageContext.cs" />
+    <Compile Include="CustomMessageHandler.cs" />
+    <Compile Include="CustomMessageHandler_Events.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
