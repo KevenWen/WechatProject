@@ -173,3 +173,4 @@ D:\Hightch\WeChat\GitRep_wechatDemo\WeChatHelloWorld1\bin\System.Web.WebPages.Ra
 D:\Hightch\WeChat\GitRep_wechatDemo\WeChatHelloWorld1\bin\Antlr3.Runtime.pdb
 D:\Hightch\WeChat\GitRep_wechatDemo\WeChatHelloWorld1\obj\Debug\WeChatHelloWorld1.dll
 D:\Hightch\WeChat\GitRep_wechatDemo\WeChatHelloWorld1\obj\Debug\WeChatHelloWorld1.pdb
+D:\Hightch\WeChat\GitRep_wechatDemo\WeChatHelloWorld1\obj\Debug\WeChatOrderingSystem.csprojResolveAssemblyReference.cache
