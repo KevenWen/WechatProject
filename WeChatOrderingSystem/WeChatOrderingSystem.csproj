@@ -166,8 +166,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Authenticaton.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\WeChatUsersController.cs" />
     <Compile Include="Controllers\WXController.cs" />
     <Compile Include="CustomMessageContext.cs" />
@@ -176,6 +178,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\WeChatHelloWorld1Context.cs" />
     <Compile Include="Models\WeChatUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -224,6 +227,11 @@
     <Content Include="Views\WeChatUsers\Details.cshtml" />
     <Content Include="Views\WeChatUsers\Edit.cshtml" />
     <Content Include="Views\WeChatUsers\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

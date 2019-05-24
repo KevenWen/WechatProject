@@ -21,7 +21,7 @@ namespace WeChatHelloWorld1.Controllers
             bg.button.Add(new SingleViewButton()
             {
                 name = "注册",
-                url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect", AppId, Url.Encode("https://www.share-parking.com/Register/")),
+                url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect", AppId, Url.Encode("https://www.share-parking.com/User/Create")),
                 type = MenuButtonType.view.ToString(), 
             });
             bg.button.Add(new SingleViewButton()

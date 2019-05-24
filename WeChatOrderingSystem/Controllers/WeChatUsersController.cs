@@ -38,6 +38,7 @@ namespace WeChatHelloWorld1.Controllers
         // GET: WeChatUsers/Create
         public ActionResult Create()
         {
+            
             return View();
         }
 
