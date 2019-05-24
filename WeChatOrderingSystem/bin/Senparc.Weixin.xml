@@ -14,6 +14,20 @@
             LocalCacheStrategy的构造函数
             </summary>
         </member>
+        <member name="M:Senparc.Weixin.Cache.LocalContainerCacheStrategy.GetAll``1">
+            <summary>
+             获取所有 Bag 对象
+            </summary>
+            <typeparam name="TBag"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.Cache.LocalContainerCacheStrategy.GetAllAsync``1">
+            <summary>
+             【异步方法】获取所有 Bag 对象
+            </summary>
+            <typeparam name="TBag"></typeparam>
+            <returns></returns>
+        </member>
         <member name="T:Senparc.Weixin.Cache.ContainerCacheStrategyDomain">
             <summary>
             Container的领域缓存策略定义
@@ -35,6 +49,19 @@
             数据源缓存策略
             </summary>
         </member>
+        <member name="M:Senparc.Weixin.Cache.BaseContainerCacheStrategy.RegisterCacheStrategyDomain(Senparc.CO2NET.Cache.IDomainExtensionCacheStrategy)">
+            <summary>
+            向底层缓存注册当前缓存策略
+            </summary>
+            <param name="extensionCacheStrategy"></param>
+        </member>
+        <member name="M:Senparc.Weixin.Cache.BaseContainerCacheStrategy.GetAll``1">
+            <summary>
+            获取所有 Bag 对象
+            </summary>
+            <typeparam name="TBag"></typeparam>
+            <returns></returns>
+        </member>
         <member name="M:Senparc.Weixin.Cache.BaseContainerCacheStrategy.GetContainerBag``1(System.String,System.Boolean)">
             <summary>
             获取单个ContainerBag
@@ -43,11 +70,29 @@
             <param name="isFullKey">是否已经是完整的Key，如果不是，则会调用一次GetFinalKey()方法</param>
             <returns></returns>
         </member>
-        <member name="M:Senparc.Weixin.Cache.BaseContainerCacheStrategy.RegisterCacheStrategyDomain(Senparc.CO2NET.Cache.IDomainExtensionCacheStrategy)">
+        <member name="M:Senparc.Weixin.Cache.BaseContainerCacheStrategy.GetAllAsync``1">
             <summary>
-            向底层缓存注册当前缓存策略
+            【异步方法】获取所有 Bag 对象
             </summary>
-            <param name="extensionCacheStrategy"></param>
+            <typeparam name="TBag"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.Cache.BaseContainerCacheStrategy.GetContainerBagAsync``1(System.String,System.Boolean)">
+            <summary>
+            【异步方法】获取单个ContainerBag
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="isFullKey">是否已经是完整的Key，如果不是，则会调用一次GetFinalKey()方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.Cache.BaseContainerCacheStrategy.UpdateContainerBagAsync(System.String,Senparc.Weixin.Containers.IBaseContainerBag,System.Nullable{System.TimeSpan},System.Boolean)">
+            <summary>
+            【异步方法】更新 ContainerBag
+            </summary>
+            <param name="key"></param>
+            <param name="bag"></param>
+            <param name="expiry"></param>
+            <param name="isFullKey"></param>
         </member>
         <member name="T:Senparc.Weixin.Cache.IContainerCacheStrategy">
             <summary>
@@ -78,6 +123,30 @@
             <param name="expiry">超时时间</param>
             <param name="isFullKey">是否已经是完整的Key，如果不是，则会调用一次GetFinalKey()方法</param>
         </member>
+        <member name="M:Senparc.Weixin.Cache.IContainerCacheStrategy.GetAllAsync``1">
+            <summary>
+            【异步方法】获取所有ContainerBag
+            </summary>
+            <typeparam name="TBag"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.Cache.IContainerCacheStrategy.GetContainerBagAsync``1(System.String,System.Boolean)">
+            <summary>
+            【异步方法】获取单个ContainerBag
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="isFullKey">是否已经是完整的Key，如果不是，则会调用一次GetFinalKey()方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.Cache.IContainerCacheStrategy.UpdateContainerBagAsync(System.String,Senparc.Weixin.Containers.IBaseContainerBag,System.Nullable{System.TimeSpan},System.Boolean)">
+            <summary>
+            【异步方法】更新ContainerBag
+            </summary>
+            <param name="key"></param>
+            <param name="containerBag"></param>
+            <param name="expiry">超时时间</param>
+            <param name="isFullKey">是否已经是完整的Key，如果不是，则会调用一次GetFinalKey()方法</param>
+        </member>
         <member name="T:Senparc.Weixin.CommonAPIs.ApiHandlerWapper.ApiHandlerWapperBase">
             <summary>
             所有子模块ApiHandlerWapper方法调用的基础方法
@@ -98,14 +167,14 @@
             <param name="retryIfFaild"></param>
             <returns></returns>
         </member>
-        <member name="M:Senparc.Weixin.CommonAPIs.ApiHandlerWapper.ApiHandlerWapperBase.TryCommonApiBaseAsync``1(Senparc.Weixin.PlatformType,System.Func{System.String},System.Func{System.String,System.Boolean},System.Func{System.String,System.Boolean,System.Threading.Tasks.Task{Senparc.Weixin.Entities.IAccessTokenResult}},System.Int32,System.Func{System.String,System.Threading.Tasks.Task{``0}},System.String,System.Boolean)">
+        <member name="M:Senparc.Weixin.CommonAPIs.ApiHandlerWapper.ApiHandlerWapperBase.TryCommonApiBaseAsync``1(Senparc.Weixin.PlatformType,System.Func{System.Threading.Tasks.Task{System.String}},System.Func{System.String,System.Threading.Tasks.Task{System.Boolean}},System.Func{System.String,System.Boolean,System.Threading.Tasks.Task{Senparc.Weixin.Entities.IAccessTokenResult}},System.Int32,System.Func{System.String,System.Threading.Tasks.Task{``0}},System.String,System.Boolean)">
             <summary>
             TryCommonApi 方法的基类
             </summary>
             <typeparam name="T"></typeparam>
             <param name="platformType">平台类型，PlatformType枚举</param>
-            <param name="accessTokenContainer_GetFirstOrDefaultAppIdFunc">AccessTokenContainer中的GetFirstOrDefaultAppId()方法</param>
-            <param name="accessTokenContainer_CheckRegisteredFunc">AccessTokenContainer中的bool CheckRegistered(appId,getNew)方法</param>
+            <param name="accessTokenContainer_GetFirstOrDefaultAppIdAsyncFunc">AccessTokenContainer中的GetFirstOrDefaultAppId()方法</param>
+            <param name="accessTokenContainer_CheckRegisteredAsyncFunc">AccessTokenContainer中的bool CheckRegistered(appId,getNew)方法</param>
             <param name="accessTokenContainer_GetAccessTokenResultAsyncFunc">AccessTokenContainer中的AccessTokenResult GetAccessTokenResultAsync(appId)方法（异步方法）</param>
             <param name="invalidCredentialValue">"ReturnCode.获取access_token时AppSecret错误或者access_token无效"枚举的值</param>
             <param name="fun"></param>
@@ -281,27 +350,28 @@
             获取符合当前缓存策略配置的缓存的操作对象实例
             </summary>
         </member>
-        <member name="P:Senparc.Weixin.Containers.BaseContainer`1.RegisterFunc">
+        <member name="P:Senparc.Weixin.Containers.BaseContainer`1.RegisterFuncCollection">
             <summary>
-            进行注册过程的委托
+            进行注册过程的委托集合
             </summary>
         </member>
-        <member name="M:Senparc.Weixin.Containers.BaseContainer`1.TryReRegister">
+        <member name="M:Senparc.Weixin.Containers.BaseContainer`1.TryReRegister(System.String)">
             <summary>
             如果注册不成功，测尝试重新注册（前提是已经进行过注册），这种情况适用于分布式缓存被清空（重启）的情况。
+            <param name="shortKey">最简短的Key，比如AppId，不需要考虑容器前缀</param>
             </summary>
-        </member>
-        <member name="M:Senparc.Weixin.Containers.BaseContainer`1.GetFirstOrDefaultAppId(Senparc.Weixin.PlatformType)">
-            <summary>
-            返回已经注册的第一个AppId
-            </summary>
-            <returns></returns>
         </member>
         <member name="M:Senparc.Weixin.Containers.BaseContainer`1.GetBagCacheKey(System.String)">
             <summary>
             获取ItemCollection缓存Key
             </summary>
             <param name="shortKey">最简短的Key，比如AppId，不需要考虑容器前缀</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.Containers.BaseContainer`1.GetFirstOrDefaultAppId(Senparc.Weixin.PlatformType)">
+            <summary>
+            返回已经注册的第一个AppId
+            </summary>
             <returns></returns>
         </member>
         <member name="M:Senparc.Weixin.Containers.BaseContainer`1.GetAllItems">
@@ -362,6 +432,70 @@
             </summary>
             <param name="shortKey"></param>
         </member>
+        <member name="M:Senparc.Weixin.Containers.BaseContainer`1.GetFirstOrDefaultAppIdAsync(Senparc.Weixin.PlatformType)">
+            <summary>
+            返回已经注册的第一个AppId
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.Containers.BaseContainer`1.GetAllItemsAsync">
+            <summary>
+            获取所有容器内已经注册的项目
+            （此方法将会遍历Dictionary，当数据项很多的时候效率会明显降低）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.Containers.BaseContainer`1.TryGetItemAsync(System.String)">
+            <summary>
+            尝试获取某一项Bag
+            </summary>
+            <param name="shortKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.Containers.BaseContainer`1.TryGetItemAsync``1(System.String,System.Func{`0,``0})">
+            <summary>
+            尝试获取某一项Bag中的具体某个属性
+            </summary>
+            <param name="shortKey"></param>
+            <param name="property">具体某个属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.Containers.BaseContainer`1.UpdateAsync(System.String,`0,System.Nullable{System.TimeSpan})">
+            <summary>
+            更新数据项
+            </summary>
+            <param name="shortKey">即bag.Key</param>
+            <param name="bag">为null时删除该项</param>
+            <param name="expiry"></param>
+        </member>
+        <member name="M:Senparc.Weixin.Containers.BaseContainer`1.UpdateAsync(`0,System.Nullable{System.TimeSpan})">
+            <summary>
+            更新已经添加过的数据项
+            </summary>
+            <param name="bag">为null时删除该项</param>
+            <param name="expiry"></param>
+        </member>
+        <member name="M:Senparc.Weixin.Containers.BaseContainer`1.UpdateAsync(System.String,System.Action{`0},System.Nullable{System.TimeSpan})">
+            <summary>
+            更新数据项（本地缓存不会改变原有值的 HashCode）
+            </summary>
+            <param name="shortKey"></param>
+            <param name="partialUpdate">为null时删除该项</param>
+            <param name="expiry"></param>
+        </member>
+        <member name="M:Senparc.Weixin.Containers.BaseContainer`1.CheckRegisteredAsync(System.String)">
+            <summary>
+            检查Key是否已经注册
+            </summary>
+            <param name="shortKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.Containers.BaseContainer`1.RemoveFromCacheAsync(System.String)">
+            <summary>
+            从缓存中删除指定项
+            </summary>
+            <param name="shortKey"></param>
+        </member>
         <member name="T:Senparc.Weixin.Containers.IBaseContainerBag">
             <summary>
             IBaseContainerBag，BaseContainer容器中的Value类型
@@ -412,6 +546,12 @@
             缓存时间，不使用属性变化监听
             </summary>
         </member>
+        <member name="T:Senparc.Weixin.Containers.BaseContainerRegisterFuncCollection`1">
+            <summary>
+            储存 Container 注册过程方法的集合
+            </summary>
+            <typeparam name="TBag"></typeparam>
+        </member>
         <member name="T:Senparc.Weixin.Entities.BindableBase">
             <summary>
             用于实现INotifyPropertyChanged
@@ -426,7 +566,6 @@
             <param name="value"></param>
             <param name="propertyName"></param>
             <returns></returns>
-            #if NET35 || NET40
         </member>
         <member name="T:Senparc.Weixin.Entities.IAccessTokenResult">
             <summary>

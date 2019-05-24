@@ -6663,6 +6663,20 @@
             <param name="timeOut"></param>
             <returns></returns>
         </member>
+        <member name="M:Senparc.Weixin.MP.AdvancedAPIs.CustomApi.SendMiniProgramPage(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            发送小程序卡片（要求小程序与公众号已关联）
+            </summary>
+            <param name="accessTokenOrAppId">AccessToken或AppId（推荐使用AppId，需要先注册）</param>
+            <param name="openId"></param>
+            <param name="title">小程序卡片的标题</param>
+            <param name="appid">小程序的appid，要求小程序的appid需要与公众号有关联关系</param>
+            <param name="pagepath">小程序的页面路径，跟app.json对齐，支持参数，比如pages/index/index?foo=bar</param>
+            <param name="thumb_media_id">小程序卡片图片的媒体ID，小程序卡片图片建议大小为520*416</param>
+            <param name="kfAccount"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
         <member name="M:Senparc.Weixin.MP.AdvancedAPIs.CustomApi.GetTypingStatus(System.String,System.String,System.String,System.Int32)">
             <summary>
             客服输入状态
@@ -6778,6 +6792,20 @@
             <param name="openId"></param>
             <param name="cardId"></param>
             <param name="cardExt"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.MP.AdvancedAPIs.CustomApi.SendMiniProgramPageAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            【异步方法】发送小程序卡片（要求小程序与公众号已关联）
+            </summary>
+            <param name="accessTokenOrAppId">AccessToken或AppId（推荐使用AppId，需要先注册）</param>
+            <param name="openId"></param>
+            <param name="title">小程序卡片的标题</param>
+            <param name="appid">小程序的appid，要求小程序的appid需要与公众号有关联关系</param>
+            <param name="pagepath">小程序的页面路径，跟app.json对齐，支持参数，比如pages/index/index?foo=bar</param>
+            <param name="thumb_media_id">小程序卡片图片的媒体ID，小程序卡片图片建议大小为520*416</param>
+            <param name="kfAccount"></param>
             <param name="timeOut"></param>
             <returns></returns>
         </member>
@@ -15291,10 +15319,11 @@
         </member>
         <member name="M:Senparc.Weixin.MP.AdvancedAPIs.UserApi.Get(System.String,System.String)">
             <summary>
-            获取关注者OpenId信息
+            获取关注者OpenId信息 .
+            一次拉取调用最多拉取10000个关注者的OpenID，可通过填写next_openid的值，从而多次拉取列表的方式来满足需求。
             </summary>
             <param name="accessTokenOrAppId">AccessToken或AppId（推荐使用AppId，需要先注册）</param>
-            <param name="nextOpenId"></param>
+            <param name="nextOpenId">第一个拉取的OPENID，不填默认从头开始拉取</param>
             <returns></returns>
         </member>
         <member name="M:Senparc.Weixin.MP.AdvancedAPIs.UserApi.UpdateRemark(System.String,System.String,System.String,System.Int32)">
@@ -15426,6 +15455,31 @@
         <member name="P:Senparc.Weixin.MP.AdvancedAPIs.User.BatchGetUserInfoData.LangEnum">
             <summary>
             lang属性的枚举转换
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.AdvancedAPIs.User.OpenIdResultJson">
+            <summary>
+            获取关注者OpenId信息返回结果
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.AdvancedAPIs.User.OpenIdResultJson.total">
+            <summary>
+            关注该公众账号的总用户数
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.AdvancedAPIs.User.OpenIdResultJson.count">
+            <summary>
+            拉取的OPENID个数，最大值为10000
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.AdvancedAPIs.User.OpenIdResultJson.data">
+            <summary>
+            列表数据，OPENID的列表
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.AdvancedAPIs.User.OpenIdResultJson.next_openid">
+            <summary>
+            拉取列表的最后一个用户的OPENID
             </summary>
         </member>
         <member name="T:Senparc.Weixin.MP.AdvancedAPIs.User.UserInfoJson">
@@ -17253,6 +17307,14 @@
             <param name="getNewToken">是否强制重新获取新的Token</param>
             <returns></returns>
         </member>
+        <member name="M:Senparc.Weixin.MP.Containers.AccessTokenContainer.RegisterAsync(System.String,System.String,System.String)">
+            <summary>
+            【异步方法】注册应用凭证信息，此操作只是注册，不会马上获取Token，并将清空之前的Token
+            </summary>
+            <param name="appId">微信公众号后台的【开发】>【基本配置】中的N“AppID(应用ID)”</param>
+            <param name="appSecret">微信公众号后台的【开发】>【基本配置】中的“AppSecret(应用密钥)”</param>
+            <param name="name">标记AccessToken名称（如微信公众号名称），帮助管理员识别。当 name 不为 null 和 空值时，本次注册内容将会被记录到 Senparc.Weixin.Config.SenparcWeixinSetting.Items[name] 中，方便取用。</param>
+        </member>
         <member name="M:Senparc.Weixin.MP.Containers.AccessTokenContainer.TryGetAccessTokenAsync(System.String,System.String,System.Boolean)">
             <summary>
             【异步方法】使用完整的应用凭证获取Token，如果不存在将自动注册
@@ -17295,7 +17357,7 @@
         </member>
         <member name="M:Senparc.Weixin.MP.Containers.JsApiTicketContainer.Register(System.String,System.String,System.String)">
             <summary>
-            注册应用凭证信息，此操作只是注册，不会马上获取Ticket，并将清空之前的Ticket，
+            注册应用凭证信息，此操作只是注册，不会马上获取Ticket，并将清空之前的Ticket
             </summary>
             <param name="appId"></param>
             <param name="appSecret"></param>
@@ -17325,6 +17387,14 @@
             <param name="appId"></param>
             <param name="getNewTicket">是否强制重新获取新的Ticket</param>
             <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.MP.Containers.JsApiTicketContainer.RegisterAsync(System.String,System.String,System.String)">
+            <summary>
+            【异步方法】注册应用凭证信息，此操作只是注册，不会马上获取Ticket，并将清空之前的Ticket，
+            </summary>
+            <param name="appId"></param>
+            <param name="appSecret"></param>
+            <param name="name">标记JsApiTicket名称（如微信公众号名称），帮助管理员识别。当 name 不为 null 和 空值时，本次注册内容将会被记录到 Senparc.Weixin.Config.SenparcWeixinSetting.Items[name] 中，方便取用。</param>
         </member>
         <member name="M:Senparc.Weixin.MP.Containers.JsApiTicketContainer.TryGetJsApiTicketAsync(System.String,System.String,System.Boolean)">
             <summary>
@@ -17369,6 +17439,15 @@
         <member name="M:Senparc.Weixin.MP.Containers.OAuthAccessTokenContainer.Register(System.String,System.String,System.String)">
             <summary>
             注册应用凭证信息，此操作只是注册，不会马上获取Ticket，并将清空之前的Ticket，
+            </summary>
+            <param name="appId"></param>
+            <param name="appSecret"></param>
+            <param name="name">标记JsApiTicket名称（如微信公众号名称），帮助管理员识别。当 name 不为 null 和 空值时，本次注册内容将会被记录到 Senparc.Weixin.Config.SenparcWeixinSetting.Items[name] 中，方便取用。</param>
+            此接口不提供异步方法
+        </member>
+        <member name="M:Senparc.Weixin.MP.Containers.OAuthAccessTokenContainer.RegisterAsync(System.String,System.String,System.String)">
+            <summary>
+            【异步方法】注册应用凭证信息，此操作只是注册，不会马上获取Ticket，并将清空之前的Ticket，
             </summary>
             <param name="appId"></param>
             <param name="appSecret"></param>
@@ -17478,6 +17557,14 @@
             <param name="appId"></param>
             <param name="getNewTicket">是否强制重新获取新的Ticket</param>
             <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.MP.Containers.WxCardApiTicketContainer.RegisterAsync(System.String,System.String,System.String)">
+            <summary>
+            【异步方法】注册应用凭证信息，此操作只是注册，不会马上获取Ticket，并将清空之前的Ticket，
+            </summary>
+            <param name="appId"></param>
+            <param name="appSecret"></param>
+            <param name="name">标记JsApiTicket名称（如微信公众号名称），帮助管理员识别。当 name 不为 null 和 空值时，本次注册内容将会被记录到 Senparc.Weixin.Config.SenparcWeixinSetting.Items[name] 中，方便取用。</param>
         </member>
         <member name="M:Senparc.Weixin.MP.Containers.WxCardApiTicketContainer.TryGetWxCardApiTicketAsync(System.String,System.String,System.Boolean)">
             <summary>

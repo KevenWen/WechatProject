@@ -199,6 +199,12 @@
             <param name="platformType">PlatformType</param>
             <param name="apiBindAttrName">跨程序集的通用名称（如：CustomApi.SendText）</param>
         </member>
+        <member name="M:Senparc.NeuChar.ApiBind.ApiBindInfoCollection.GetGroupedCollection">
+            <summary>
+            获取不同模块的分组 API 绑定信息（注意：每次获取都会重新执行分组过程）
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Senparc.NeuChar.ApiBind.ApiBindJson">
             <summary>
             ApiBind Json 设置格式
@@ -2786,7 +2792,7 @@
             NeuChar 注册
             </summary>
         </member>
-        <member name="F:Senparc.NeuChar.Register.RegisterApiBindFinished">
+        <member name="P:Senparc.NeuChar.Register.RegisterApiBindFinished">
             <summary>
             是否API绑定已经执行完
             </summary>
@@ -2803,10 +2809,16 @@
             <param name="name">唯一名称</param>
             <param name="type">节点类型</param>
         </member>
-        <member name="M:Senparc.NeuChar.Register.RegisterApiBind">
+        <member name="F:Senparc.NeuChar.Register.RegisterApiBindLck">
+            <summary>
+            RegisterApiBind 执行锁
+            </summary>
+        </member>
+        <member name="M:Senparc.NeuChar.Register.RegisterApiBind(System.Boolean)">
             <summary>
             自动扫描并注册 ApiBind
             </summary>
+            <param name="forceBindAgain">是否强制重刷新</param>
         </member>
     </members>
 </doc>

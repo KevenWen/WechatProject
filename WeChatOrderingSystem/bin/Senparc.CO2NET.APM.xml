@@ -19,6 +19,21 @@
             打开内存状态监控
             </summary>
         </member>
+        <member name="T:Senparc.CO2NET.APM.Config">
+            <summary>
+            APM 配置
+            </summary>
+        </member>
+        <member name="F:Senparc.CO2NET.APM.Config.DataExpire">
+            <summary>
+            APM 信息自动过期时间
+            </summary>
+        </member>
+        <member name="F:Senparc.CO2NET.APM.Config.EnableAPM">
+            <summary>
+            启用 APM
+            </summary>
+        </member>
         <member name="T:Senparc.CO2NET.APM.DataOperation">
             <summary>
             

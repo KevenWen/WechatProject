@@ -11,8 +11,7 @@ using Senparc.Weixin;
 using Senparc.Weixin.Entities;
 // using Senparc.Weixin.Work.Containers;
 using Senparc.Weixin.MP.Containers;
-using Senparc.CO2NET.Cache;
-using Senparc.CO2NET.Cache.Memcached;
+
 
 
 namespace WeChatHelloWorld1
