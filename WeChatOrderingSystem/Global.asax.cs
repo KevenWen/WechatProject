@@ -11,8 +11,8 @@ using Senparc.Weixin;
 using Senparc.Weixin.Entities;
 // using Senparc.Weixin.Work.Containers;
 using Senparc.Weixin.MP.Containers;
-
-
+using System.Data.Entity;
+using WeChatHelloWorld1.Models;
 
 namespace WeChatHelloWorld1
 {
@@ -52,6 +52,8 @@ namespace WeChatHelloWorld1
             //除此以外，仍然可以在程序任意地方注册公众号或小程序, 命名空间：Senparc.Weixin.MP.Containers：
             AccessTokenContainer.Register(Senparc.Weixin.Config.SenparcWeixinSetting.WeixinAppId,
                                           Senparc.Weixin.Config.SenparcWeixinSetting.WeixinAppSecret);
+
+            Database.SetInitializer<WeChatHelloWorld1Context>(null);
         }
     }
 }
