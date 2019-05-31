@@ -21,20 +21,20 @@ namespace WeChatHelloWorld1.Controllers
             bg.button.Add(new SingleViewButton()
             {
                 name = "注册",
-                url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect", AppId, Url.Encode("https://www.share-parking.com/User/Create")),
+                url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect", AppId, Url.Encode("http://hightch.shareparking.net/Users/Create")),
                 type = MenuButtonType.view.ToString(), 
             });
             bg.button.Add(new SingleViewButton()
             {
                 name = "菜单",
-                url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect", AppId, Url.Encode("https://www.share-parking.com/Menu/")),
+                url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect", AppId, Url.Encode("http://hightch.shareparking.net/Menu/")),
                 type = MenuButtonType.view.ToString(),
                 
             });
             bg.button.Add(new SingleViewButton()
             {
                 name = "我的订单",
-                url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect", AppId, Url.Encode("https://www.share-parking.com/Order/")),
+                url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect", AppId, Url.Encode("http://hightch.shareparking.net/Order/")),
                 type = MenuButtonType.view.ToString(),
 
             });

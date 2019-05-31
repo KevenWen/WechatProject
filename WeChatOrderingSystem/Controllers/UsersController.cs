@@ -1,5 +1,7 @@
-﻿using Senparc.Weixin.MP.AdvancedAPIs;
+﻿using Senparc.Weixin;
+using Senparc.Weixin.MP.AdvancedAPIs;
 using Senparc.Weixin.MP.AdvancedAPIs.OAuth;
+using Senparc.Weixin.MP.Containers;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -43,8 +45,9 @@ namespace WeChatHelloWorld1.Controllers
             if (code != null)
             {
                 Authentication auth = new Authentication();
-                string errorMessage;
+                string errorMessage;        
                 auth.UserInfoCallback(code, out errorMessage);
+                ViewBag.OpenID = Session["OpenID"].ToString();
             }
             return View();
         }
@@ -60,6 +63,12 @@ namespace WeChatHelloWorld1.Controllers
             {
 
                 // Create wechatUser
+                //if (Session["AccessToken"] == null)
+                //{
+                //    var accessToken = AccessTokenContainer.TryGetAccessToken(Config.SenparcWeixinSetting.WeixinAppId, Config.SenparcWeixinSetting.WeixinAppSecret);
+                //    Session["AccessToken"] = accessToken;
+                //}
+
                 OAuthUserInfo userInfo = OAuthApi.GetUserInfo(Session["AccessToken"].ToString(), Session["OpenID"].ToString());
                 var weChatUser = db.WeChatUsers.Find(userInfo.openid);
                 if (weChatUser == null)
