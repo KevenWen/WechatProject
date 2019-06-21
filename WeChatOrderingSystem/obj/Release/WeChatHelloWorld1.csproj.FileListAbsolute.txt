@@ -1,0 +1,169 @@
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\csc.exe
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\System.Collections.Immutable.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\vbc.exe
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\VBCSCompiler.exe
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\VBCSCompiler.exe.config
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\WeChatHelloWorld1.dll.config
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\WeChatHelloWorld1.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\WeChatHelloWorld1.pdb
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\Antlr3.Runtime.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\Microsoft.Web.Infrastructure.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\Newtonsoft.Json.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.Helpers.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.Mvc.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.Optimization.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.Razor.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.WebPages.Deployment.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.WebPages.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.WebPages.Razor.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\WebGrease.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.Helpers.xml
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.Mvc.xml
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.Optimization.xml
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.Razor.xml
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.WebPages.xml
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.WebPages.Deployment.xml
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.WebPages.Razor.xml
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\Antlr3.Runtime.pdb
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\bin\Newtonsoft.Json.xml
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\obj\Release\WeChatHelloWorld1.dll
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\obj\Release\WeChatHelloWorld1.pdb
+c:\users\rzhou\documents\visual studio 2015\Projects\WeChatHelloWorld1\WeChatHelloWorld1\obj\Release\WeChatHelloWorld1.csprojResolveAssemblyReference.cache
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\csc.exe
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\System.Collections.Immutable.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\System.Reflection.Metadata.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\vbc.exe
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\VBCSCompiler.exe
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\roslyn\VBCSCompiler.exe.config
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\WeChatHelloWorld1.dll.config
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\WeChatHelloWorld1.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\WeChatHelloWorld1.pdb
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\Antlr3.Runtime.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\Microsoft.Web.Infrastructure.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\Newtonsoft.Json.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.Helpers.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.Mvc.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.Optimization.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.Razor.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.WebPages.Deployment.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.WebPages.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.WebPages.Razor.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\WebGrease.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.Helpers.xml
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.Mvc.xml
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.Optimization.xml
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.Razor.xml
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.WebPages.xml
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.WebPages.Deployment.xml
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\System.Web.WebPages.Razor.xml
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\Antlr3.Runtime.pdb
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\bin\Newtonsoft.Json.xml
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\obj\Release\WeChatHelloWorld1.csprojResolveAssemblyReference.cache
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\obj\Release\WeChatHelloWorld1.dll
+C:\workspace\WeChatHelloWorld1\WeChatHelloWorld1\obj\Release\WeChatHelloWorld1.pdb
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\roslyn\csc.exe
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\roslyn\System.Collections.Immutable.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\roslyn\System.Reflection.Metadata.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\roslyn\vbc.exe
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\roslyn\VBCSCompiler.exe
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\roslyn\VBCSCompiler.exe.config
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\WeChatHelloWorld1.dll.config
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\WeChatHelloWorld1.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\WeChatHelloWorld1.pdb
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Antlr3.Runtime.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Microsoft.Web.Infrastructure.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Newtonsoft.Json.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Web.Helpers.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Web.Mvc.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Web.Optimization.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Web.Razor.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Web.WebPages.Deployment.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Web.WebPages.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Web.WebPages.Razor.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\WebGrease.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Web.Helpers.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Web.Mvc.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Web.Optimization.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Web.Razor.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Web.WebPages.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Web.WebPages.Deployment.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Web.WebPages.Razor.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Antlr3.Runtime.pdb
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Newtonsoft.Json.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\obj\Release\WeChatHelloWorld1.csprojResolveAssemblyReference.cache
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\obj\Release\WeChatHelloWorld1.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\obj\Release\WeChatHelloWorld1.pdb
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.CO2NET.APM.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.CO2NET.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.NeuChar.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.Weixin.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.Weixin.MP.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.Weixin.Open.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.Weixin.Work.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Newtonsoft.Json.pdb
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.CO2NET.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.CO2NET.APM.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.NeuChar.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.Weixin.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.Weixin.MP.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.Weixin.Open.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.Weixin.Work.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\BinaryFormatter.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Enyim.Caching.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Enyim.Caching.Web.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Membase.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Microsoft.Win32.Primitives.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.CO2NET.Cache.Memcached.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.CO2NET.Cache.Redis.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.CO2NET.Cache.Redis.RedLock.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\StackExchange.Redis.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.AppContext.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Console.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Globalization.Calendars.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.IO.Compression.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.IO.Compression.ZipFile.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.IO.FileSystem.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.IO.FileSystem.Primitives.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Net.Http.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Net.Sockets.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Security.Cryptography.Algorithms.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Security.Cryptography.Encoding.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Security.Cryptography.Primitives.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Security.Cryptography.X509Certificates.dll
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Enyim.Caching.pdb
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Enyim.Caching.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Enyim.Caching.Web.pdb
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Membase.pdb
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Membase.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.CO2NET.Cache.Redis.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.CO2NET.Cache.Redis.RedLock.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\StackExchange.Redis.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Hightch\WeChat\WeChatHelloWorld\WeChatHelloWorld1\bin\Senparc.Weixin.MP.pdb

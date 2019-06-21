@@ -1,2 +1,9 @@
 /packages
-/WeChatHelloWorld1/bin
+/WeChatHelloWorld1/bin/
+/WeChatHelloWorld1/obj/
+
+/WeChatOrderingSystem/bin
+/WeChatOrderingSystem/obj
+/WeChatOrderingSystem/.vs
+/WeChatOrderingSystem/packages
+obj
