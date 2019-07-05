@@ -53,7 +53,9 @@ namespace WeChatHelloWorld1
             AccessTokenContainer.Register(Senparc.Weixin.Config.SenparcWeixinSetting.WeixinAppId,
                                           Senparc.Weixin.Config.SenparcWeixinSetting.WeixinAppSecret);
 
-            Database.SetInitializer<WeChatHelloWorld1Context>(null);
+            Database.SetInitializer<WeChatHelloWorld1Context>(new DropCreateDatabaseIfModelChanges<WeChatHelloWorld1Context>());
+
+
         }
     }
 }
