@@ -27,7 +27,7 @@ namespace WeChatHelloWorld1.Models
 
         public System.Data.Entity.DbSet<WeChatHelloWorld1.Models.WeChatUser> WeChatUsers { get; set; }
 
-        public System.Data.Entity.DbSet<WeChatHelloWorld1.Models.User> Users { get; set; }
+        public System.Data.Entity.DbSet<WeChatHelloWorld1.Models.Product> Products { get; set; }
 
         public System.Data.Entity.DbSet<WeChatHelloWorld1.Models.CustomerOrder> CustomerOrders { get; set; }
 
