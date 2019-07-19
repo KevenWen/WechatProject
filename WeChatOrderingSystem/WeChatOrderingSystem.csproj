@@ -174,6 +174,9 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\User_AdminInfoController.cs" />
+    <Compile Include="Controllers\User_CustomerInfoController.cs" />
+    <Compile Include="Controllers\User_MerchantInfoController.cs" />
     <Compile Include="Controllers\WXController.cs" />
     <Compile Include="CustomMessageContext.cs" />
     <Compile Include="CustomMessageHandler.cs" />
@@ -185,6 +188,9 @@
     <Compile Include="Models\CustomerOrderProduct.cs" />
     <Compile Include="Models\CustomerOrderStatue.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\User_AdminInfo.cs" />
+    <Compile Include="Models\User_CustomerInfo.cs" />
+    <Compile Include="Models\User_MerchantInfo.cs" />
     <Compile Include="Models\WeChatHelloWorld1Context.cs" />
     <Compile Include="Models\WeChatUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -361,6 +367,21 @@
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\User_AdminInfo\Create.cshtml" />
+    <Content Include="Views\User_AdminInfo\Delete.cshtml" />
+    <Content Include="Views\User_AdminInfo\Details.cshtml" />
+    <Content Include="Views\User_AdminInfo\Edit.cshtml" />
+    <Content Include="Views\User_AdminInfo\Index.cshtml" />
+    <Content Include="Views\User_CustomerInfo\Create.cshtml" />
+    <Content Include="Views\User_CustomerInfo\Delete.cshtml" />
+    <Content Include="Views\User_CustomerInfo\Details.cshtml" />
+    <Content Include="Views\User_CustomerInfo\Edit.cshtml" />
+    <Content Include="Views\User_CustomerInfo\Index.cshtml" />
+    <Content Include="Views\User_MerchantInfo\Create.cshtml" />
+    <Content Include="Views\User_MerchantInfo\Delete.cshtml" />
+    <Content Include="Views\User_MerchantInfo\Details.cshtml" />
+    <Content Include="Views\User_MerchantInfo\Edit.cshtml" />
+    <Content Include="Views\User_MerchantInfo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
