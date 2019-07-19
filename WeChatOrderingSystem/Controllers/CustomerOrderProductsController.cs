@@ -10,108 +10,107 @@ using WeChatHelloWorld1.Models;
 
 namespace WeChatHelloWorld1.Controllers
 {
-    public class WeChatUsersController : Controller
+    public class CustomerOrderProductsController : Controller
     {
         private WeChatHelloWorld1Context db = new WeChatHelloWorld1Context();
 
-        // GET: WeChatUsers
+        // GET: CustomerOrderProducts
         public ActionResult Index()
         {
-            return View(db.WeChatUsers.ToList());
+            return View(db.CustomerOrderProducts.ToList());
         }
 
-        // GET: WeChatUsers/Details/5
-        public ActionResult Details(string id)
+        // GET: CustomerOrderProducts/Details/5
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            WeChatUser weChatUser = db.WeChatUsers.Find(id);
-            if (weChatUser == null)
+            CustomerOrderProduct customerOrderProduct = db.CustomerOrderProducts.Find(id);
+            if (customerOrderProduct == null)
             {
                 return HttpNotFound();
             }
-            return View(weChatUser);
+            return View(customerOrderProduct);
         }
 
-        // GET: WeChatUsers/Create
+        // GET: CustomerOrderProducts/Create
         public ActionResult Create()
         {
-            
             return View();
         }
 
-        // POST: WeChatUsers/Create
+        // POST: CustomerOrderProducts/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "OpenID,Nickname,Sex,Province,City,Country,HeadImgUrl,SubscribeTime,Language,UserType")] WeChatUser weChatUser)
+        public ActionResult Create([Bind(Include = "CustomerOrderProductID,CustomerOrderID,Name,Price,Status,ImagePath,Created,LatestModify,Comment,MerchantID")] CustomerOrderProduct customerOrderProduct)
         {
             if (ModelState.IsValid)
             {
-                db.WeChatUsers.Add(weChatUser);
+                db.CustomerOrderProducts.Add(customerOrderProduct);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(weChatUser);
+            return View(customerOrderProduct);
         }
 
-        // GET: WeChatUsers/Edit/5
-        public ActionResult Edit(string id)
+        // GET: CustomerOrderProducts/Edit/5
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            WeChatUser weChatUser = db.WeChatUsers.Find(id);
-            if (weChatUser == null)
+            CustomerOrderProduct customerOrderProduct = db.CustomerOrderProducts.Find(id);
+            if (customerOrderProduct == null)
             {
                 return HttpNotFound();
             }
-            return View(weChatUser);
+            return View(customerOrderProduct);
         }
 
-        // POST: WeChatUsers/Edit/5
+        // POST: CustomerOrderProducts/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "OpenID,Nickname,Sex,Province,City,Country,HeadImgUrl,SubscribeTime,Language,UserType")] WeChatUser weChatUser)
+        public ActionResult Edit([Bind(Include = "CustomerOrderProductID,CustomerOrderID,Name,Price,Status,ImagePath,Created,LatestModify,Comment,MerchantID")] CustomerOrderProduct customerOrderProduct)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(weChatUser).State = EntityState.Modified;
+                db.Entry(customerOrderProduct).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(weChatUser);
+            return View(customerOrderProduct);
         }
 
-        // GET: WeChatUsers/Delete/5
-        public ActionResult Delete(string id)
+        // GET: CustomerOrderProducts/Delete/5
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            WeChatUser weChatUser = db.WeChatUsers.Find(id);
-            if (weChatUser == null)
+            CustomerOrderProduct customerOrderProduct = db.CustomerOrderProducts.Find(id);
+            if (customerOrderProduct == null)
             {
                 return HttpNotFound();
             }
-            return View(weChatUser);
+            return View(customerOrderProduct);
         }
 
-        // POST: WeChatUsers/Delete/5
+        // POST: CustomerOrderProducts/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
-            WeChatUser weChatUser = db.WeChatUsers.Find(id);
-            db.WeChatUsers.Remove(weChatUser);
+            CustomerOrderProduct customerOrderProduct = db.CustomerOrderProducts.Find(id);
+            db.CustomerOrderProducts.Remove(customerOrderProduct);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

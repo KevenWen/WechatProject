@@ -97,6 +97,7 @@
     <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Security.Cryptography.Algorithms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net46\System.Security.Cryptography.Algorithms.dll</HintPath>
       <Private>True</Private>
@@ -167,10 +168,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Authenticaton.cs" />
+    <Compile Include="Controllers\CustomerOrderProductsController.cs" />
+    <Compile Include="Controllers\CustomerOrdersController.cs" />
+    <Compile Include="Controllers\CustomerOrderStatuesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
-    <Compile Include="Controllers\UsersController.cs" />
-    <Compile Include="Controllers\WeChatUsersController.cs" />
     <Compile Include="Controllers\WXController.cs" />
     <Compile Include="CustomMessageContext.cs" />
     <Compile Include="CustomMessageHandler.cs" />
@@ -178,6 +180,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CustomerOrder.cs" />
+    <Compile Include="Models\CustomerOrderProduct.cs" />
+    <Compile Include="Models\CustomerOrderStatue.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\WeChatHelloWorld1Context.cs" />
     <Compile Include="Models\WeChatUser.cs" />
@@ -335,11 +340,21 @@
     <Content Include="Views\WeChatUsers\Details.cshtml" />
     <Content Include="Views\WeChatUsers\Edit.cshtml" />
     <Content Include="Views\WeChatUsers\Index.cshtml" />
-    <Content Include="Views\Users\Create.cshtml" />
-    <Content Include="Views\Users\Delete.cshtml" />
-    <Content Include="Views\Users\Details.cshtml" />
-    <Content Include="Views\Users\Edit.cshtml" />
-    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\CustomerOrders\Create.cshtml" />
+    <Content Include="Views\CustomerOrders\Delete.cshtml" />
+    <Content Include="Views\CustomerOrders\Details.cshtml" />
+    <Content Include="Views\CustomerOrders\Edit.cshtml" />
+    <Content Include="Views\CustomerOrders\Index.cshtml" />
+    <Content Include="Views\CustomerOrderProducts\Create.cshtml" />
+    <Content Include="Views\CustomerOrderProducts\Delete.cshtml" />
+    <Content Include="Views\CustomerOrderProducts\Details.cshtml" />
+    <Content Include="Views\CustomerOrderProducts\Edit.cshtml" />
+    <Content Include="Views\CustomerOrderProducts\Index.cshtml" />
+    <Content Include="Views\CustomerOrderStatues\Create.cshtml" />
+    <Content Include="Views\CustomerOrderStatues\Delete.cshtml" />
+    <Content Include="Views\CustomerOrderStatues\Details.cshtml" />
+    <Content Include="Views\CustomerOrderStatues\Edit.cshtml" />
+    <Content Include="Views\CustomerOrderStatues\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -2,10 +2,12 @@
 /WeChatHelloWorld1/bin/
 /WeChatHelloWorld1/obj/
 
-/WeChatOrderingSystem/bin
+.vs/*
+/WeChatOrderingSystem/bin/*
 /WeChatOrderingSystem/obj
 /WeChatOrderingSystem/.vs
 /WeChatOrderingSystem/packages
+/WeChatOrderingSystem/App_Data/SenparcTraceLog/
 obj
 
 /.vs/config/applicationhost.config

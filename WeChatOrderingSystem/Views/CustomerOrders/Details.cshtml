@@ -1,0 +1,91 @@
+﻿@model WeChatHelloWorld1.Models.CustomerOrder
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CustomerOrder</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MerchantID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerchantID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourierName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourierName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourierPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourierPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeliveryAdress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeliveryAdress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeliveryX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeliveryX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeliveryY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeliveryY)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerOrderID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -19,10 +19,20 @@ namespace WeChatHelloWorld1.Models
         {
         }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer<WeChatHelloWorld1Context>(null);
+            base.OnModelCreating(modelBuilder);
+        }
+
         public System.Data.Entity.DbSet<WeChatHelloWorld1.Models.WeChatUser> WeChatUsers { get; set; }
 
         public System.Data.Entity.DbSet<WeChatHelloWorld1.Models.User> Users { get; set; }
 
+        public System.Data.Entity.DbSet<WeChatHelloWorld1.Models.CustomerOrder> CustomerOrders { get; set; }
 
+        public System.Data.Entity.DbSet<WeChatHelloWorld1.Models.CustomerOrderProduct> CustomerOrderProducts { get; set; }
+
+        public System.Data.Entity.DbSet<WeChatHelloWorld1.Models.CustomerOrderStatue> CustomerOrderStatues { get; set; }
     }
 }

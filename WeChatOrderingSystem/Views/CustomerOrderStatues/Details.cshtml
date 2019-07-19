@@ -1,0 +1,51 @@
+﻿@model WeChatHelloWorld1.Models.CustomerOrderStatue
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CustomerOrderStatue</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerOrderID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerOrderID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Statue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Statue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdateDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StatueID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
