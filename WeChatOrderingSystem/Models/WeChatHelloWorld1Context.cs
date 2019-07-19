@@ -15,12 +15,14 @@ namespace WeChatHelloWorld1.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public WeChatHelloWorld1Context() : base("name=WeChatHelloWorld1Context")
+        public WeChatHelloWorld1Context() : base("name=WeChatContext")
         {
         }
 
         public System.Data.Entity.DbSet<WeChatHelloWorld1.Models.WeChatUser> WeChatUsers { get; set; }
 
         public System.Data.Entity.DbSet<WeChatHelloWorld1.Models.User> Users { get; set; }
+
+
     }
 }

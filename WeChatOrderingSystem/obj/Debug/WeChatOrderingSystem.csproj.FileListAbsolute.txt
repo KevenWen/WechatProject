@@ -286,3 +286,8 @@ D:\Hightch\WeChat\GitRep_wechatDemo\WeChatOrderingSystem\bin\EntityFramework.Sql
 D:\Hightch\WeChat\GitRep_wechatDemo\WeChatOrderingSystem\bin\EntityFramework.xml
 D:\Hightch\WeChat\GitRep_wechatDemo\WeChatOrderingSystem\bin\EntityFramework.SqlServer.xml
 D:\Hightch\WeChat\GitRep_wechatDemo\WeChatOrderingSystem\obj\Debug\WeChatOrderingSystem.csprojResolveAssemblyReference.cache
+C:\workspace\WechatProject\WeChatOrderingSystem\bin\EntityFramework.dll
+C:\workspace\WechatProject\WeChatOrderingSystem\bin\EntityFramework.SqlServer.dll
+C:\workspace\WechatProject\WeChatOrderingSystem\bin\EntityFramework.xml
+C:\workspace\WechatProject\WeChatOrderingSystem\bin\EntityFramework.SqlServer.xml
+C:\workspace\WechatProject\WeChatOrderingSystem\obj\Debug\WeChatOrderingSystem.csprojResolveAssemblyReference.cache
