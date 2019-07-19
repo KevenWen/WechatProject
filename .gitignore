@@ -7,3 +7,5 @@
 /WeChatOrderingSystem/.vs
 /WeChatOrderingSystem/packages
 obj
+
+/.vs/config/applicationhost.config
