@@ -69,27 +69,27 @@ namespace WeChatHelloWorld1.Controllers
                 //    Session["AccessToken"] = accessToken;
                 //}
 
-                OAuthUserInfo userInfo = OAuthApi.GetUserInfo(Session["AccessToken"].ToString(), Session["OpenID"].ToString());
-                var weChatUser = db.WeChatUsers.Find(userInfo.openid);
-                if (weChatUser == null)
-                {
-                    weChatUser = new WeChatUser
-                    {
-                        OpenID = userInfo.openid,
-                        Nickname = userInfo.nickname,
-                        Sex = userInfo.sex,
-                        Country = userInfo.country,
-                        Province = userInfo.province,
-                        City = userInfo.city,
-                        HeadImgUrl = userInfo.headimgurl,
-                        SubscribeTime = DateTime.Now
-                    };
-                    db.WeChatUsers.Add(weChatUser);
+                //OAuthUserInfo userInfo = OAuthApi.GetUserInfo(Session["AccessToken"].ToString(), Session["OpenID"].ToString());
+                //var weChatUser = db.WeChatUsers.Find(userInfo.openid);
+                //if (weChatUser == null)
+                //{
+                //    weChatUser = new WeChatUser
+                //    {
+                //        OpenID = userInfo.openid,
+                //        Nickname = userInfo.nickname,
+                //        Sex = userInfo.sex,
+                //        Country = userInfo.country,
+                //        Province = userInfo.province,
+                //        City = userInfo.city,
+                //        HeadImgUrl = userInfo.headimgurl,
+                //        SubscribeTime = DateTime.Now
+                //    };
+                //    db.WeChatUsers.Add(weChatUser);
                     // Create User
                     db.Users.Add(user);
                     db.SaveChanges();
                     return RedirectToAction("Index");
-                }
+                //}
             }
             return View(user);
         }
