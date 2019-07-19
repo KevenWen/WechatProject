@@ -34,5 +34,11 @@ namespace WeChatHelloWorld1.Models
         public System.Data.Entity.DbSet<WeChatHelloWorld1.Models.CustomerOrderProduct> CustomerOrderProducts { get; set; }
 
         public System.Data.Entity.DbSet<WeChatHelloWorld1.Models.CustomerOrderStatue> CustomerOrderStatues { get; set; }
+
+        public System.Data.Entity.DbSet<WeChatHelloWorld1.Models.User_AdminInfo> User_AdminInfo { get; set; }
+
+        public System.Data.Entity.DbSet<WeChatHelloWorld1.Models.User_CustomerInfo> User_CustomerInfo { get; set; }
+
+        public System.Data.Entity.DbSet<WeChatHelloWorld1.Models.User_MerchantInfo> User_MerchantInfo { get; set; }
     }
 }
