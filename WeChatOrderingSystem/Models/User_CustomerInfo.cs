@@ -8,9 +8,7 @@ namespace WeChatHelloWorld1.Models
 
     public partial class User_CustomerInfo
     {
-        [Key]
-        [Column(Order = 0)]
-        public Guid ID { get; set; }
+        public int ID { get; set; }
 
         [Key]
         [Column(Order = 1)]
@@ -19,7 +17,7 @@ namespace WeChatHelloWorld1.Models
 
         [Key]
         [Column(Order = 2)]
-        [StringLength(10)]
+        [StringLength(50)]
         public string PhoneNumber { get; set; }
 
         [Key]

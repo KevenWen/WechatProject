@@ -50,7 +50,6 @@ namespace WeChatHelloWorld1.Controllers
         {
             if (ModelState.IsValid)
             {
-                user_CustomerInfo.ID = Guid.NewGuid();
                 db.User_CustomerInfo.Add(user_CustomerInfo);
                 db.SaveChanges();
                 return RedirectToAction("Index");
