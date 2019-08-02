@@ -7,7 +7,7 @@
 
 <h2>添加商品</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm(null, null, FormMethod.Post, new { name = "frm", id = "frm" }))
 {
     @Html.AntiForgeryToken()
 
@@ -76,10 +76,18 @@
             </div>
         </div>
             <div class="weui-btn-area">
-               <button type="submit">OK</button>
+                <a class="weui-btn weui-btn_primary" href="javascript:doSubmit()" id="showDialog">确定</a>
             </div> 
     </div>
 }
+
+<script>
+
+    function doSubmit()
+    {
+        $("#frm").submit();
+    }
+</script>
 
 <div>
     @Html.ActionLink("Back to List", "Index")
