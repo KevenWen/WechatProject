@@ -23,38 +23,40 @@
             </div>
             
             <div class="weui-cell__bd">
-                @Html.EditorFor(model => model.MerchantID, new { htmlAttributes = new { @class = "weui-input" } })
+                @Html.EditorFor(model => model.MerchantID, new { htmlAttributes = new { @class = "weui-input weui-rt-input" } })
                 @Html.ValidationMessageFor(model => model.MerchantID, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="weui-cell">
             <div class="weui-cell__hd">
-                产品名称
+                <label class="weui-label">商品名称 <span class="tips">*</span></label>
             </div>
             <div class="weui-cell__bd">
-                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "weui-input" } })
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "weui-input weui-rt-input" } })
                 @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="weui-cell">
             <div class="weui-cell__hd">
-                价格
+                <label class="weui-label">价格 <span class="tips">*</span></label>
+                
             </div>
             <div class="weui-cell__bd">
-                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "weui-input" } })
+                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "weui-input weui-rt-input" } })
                 @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
             </div>
+            <div class="dw">元</div>
         </div>    
         
 
         <div class="weui-cell">
             <div class="weui-cell__hd">
-                描述
+                <label class="weui-label">描述 <span class="tips">*</span></label>                
             </div>
             <div class="weui-cell__bd">
-                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "weui-input" } })
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "weui-input weui-rt-input" } })
                 @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -64,8 +66,16 @@
                 备注
             </div>
             <div class="weui-cell__bd">
-                @Html.EditorFor(model => model.Comment, new { htmlAttributes = new { @class = "weui-input" } })
+                @Html.EditorFor(model => model.Comment, new { htmlAttributes = new { @class = "weui-input weui-rt-input" } })
                 @Html.ValidationMessageFor(model => model.Comment, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">商品名称 <span class="tips">*</span></label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input weui-rt-input" type="text" placeholder="">
             </div>
         </div>
         <div class="weui-cell">
