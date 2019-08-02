@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Configuration;
+using WeChatHelloWorld1.Models;
 
 namespace WeChatHelloWorld1
 {
@@ -14,13 +15,13 @@ namespace WeChatHelloWorld1
     {
         private string appId = WebConfigurationManager.AppSettings["WeixinAppId"];
         private string appSecret = WebConfigurationManager.AppSettings["WeixinAppSecret"];
-    
+        private WeChatHelloWorld1Context db = new WeChatHelloWorld1Context();
 
         public bool UserInfoCallback(string code, out string errorMessage)
         {
             errorMessage = "";
             if (string.IsNullOrEmpty(code))
-            {
+            {               
                 errorMessage = "您拒绝了授权！";
                 return false;
             }
@@ -56,13 +57,72 @@ namespace WeChatHelloWorld1
             // Session["OAuthAccessToken"] = result;
             HttpContext.Current.Session["OpenID"] = result.openid;
             HttpContext.Current.Session["AccessToken"] = result.access_token;
-            //因为第一步选择的是OAuthScope.snsapi_userinfo，这里可以进一步获取用户详细信息           
+            //因为第一步选择的是OAuthScope.snsapi_userinfo，这里可以进一步获取用户详细信息
+            try
+            {
+                OAuthUserInfo userInfo = OAuthApi.GetUserInfo(result.access_token, result.openid);
+                var weChatUser = db.WeChatUsers.Find(userInfo.openid);
+                if (weChatUser == null)
+                {
+                    int rerfererID = 0;
+                    if (HttpContext.Current.Session["refererID"] != null)
+                    {
+                        rerfererID = int.Parse(HttpContext.Current.Session["refererID"].ToString());
+                    }
+
+                    weChatUser = new WeChatUser
+                    {
+                        OpenID = userInfo.openid,
+                        Nickname = userInfo.nickname,
+                        Sex = userInfo.sex,
+                        Country = userInfo.country,
+                        Province = userInfo.province,
+                        City = userInfo.city,
+                        HeadImgUrl = userInfo.headimgurl,
+                        SubscribeTime = DateTime.Now,
+               
+                    };
+                    db.WeChatUsers.Add(weChatUser);
+                    db.SaveChanges();
+                   
+                }
+                else
+                {
+                    switch (weChatUser.UserType)
+                    {
+                        case 0:
+                            var customer = db.User_AdminInfo.Where(m => m.WeChatOpenID == result.openid).FirstOrDefault();
+                            {
+                                if (customer != null)
+                                {
+                                    HttpContext.Current.Session["Customer"] = customer;    
+                                    return true;
+                                }
+                            }
+                            break;
+                       
+                        case 2:
+                            var merchant = db.User_MerchantInfo.Where(c => c.WeChatOpenID == result.openid).FirstOrDefault();
+                            if (merchant != null)
+                            {
+                                HttpContext.Current.Session["Customer"] = merchant;     
+                                return true;
+                            }
+                            break;
+                    }
+                }
                 return false;
 
             }
-            
+            catch (Exception ex)
+            {              
+                
+                return false;
+            }
         }
 
     }
+
+}
 
 

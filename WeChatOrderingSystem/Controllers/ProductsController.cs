@@ -49,8 +49,9 @@ namespace WeChatHelloWorld1.Controllers
         {
             //if (ModelState.IsValid)
             //{
-            product.Status = "online";
-            product.MerchantID = 100;
+                product.Status = "online";
+                product.MerchantID = 10000;
+                product.Created = DateTime.Now;
                 db.Products.Add(product);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -79,10 +80,11 @@ namespace WeChatHelloWorld1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProductID,MerchantID,Name,Price,Status,ImagePath,Description,Created,LatestModify,Comment")] Product product)
+        public ActionResult Edit([Bind(Include = "ProductID,Name,Price,Status,ImagePath,Description,Comment")] Product product)
         {
             if (ModelState.IsValid)
             {
+                product.LatestModify = DateTime.Now;
                 db.Entry(product).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
