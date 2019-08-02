@@ -8,20 +8,16 @@ namespace WeChatHelloWorld1.Models
 
     public partial class User_CustomerInfo
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
         [StringLength(50)]
         public string WeChatOpenID { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
         [StringLength(50)]
         public string PhoneNumber { get; set; }
 
-        [Key]
-        [Column(Order = 3)]
         [StringLength(100)]
         public string Address { get; set; }
     }
