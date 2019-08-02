@@ -13,9 +13,8 @@
 
 
 
-    <div class="weui-cells weui-cells_form">
-      
-        <hr />
+    <div class="weui-cells weui-cells_form">      
+
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
         <div class="weui-cell">
@@ -23,8 +22,7 @@
                 <label class="weui-label">商品名称 <span class="tips">*</span></label>
             </div>
             <div class="weui-cell__bd">
-                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "weui-input weui-rt-input" } })
-                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "weui-input weui-rt-input" } })          
             </div>
         </div>
 
@@ -34,8 +32,8 @@
                 
             </div>
             <div class="weui-cell__bd">
-                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "weui-input weui-rt-input" } })
-                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "weui-input weui-rt-input", @type = "number" } })
+             
             </div>
             <div class="dw">元</div>
         </div>    
@@ -47,7 +45,7 @@
             </div>
             <div class="weui-cell__bd">
                 @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "weui-input weui-rt-input" } })
-                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            
             </div>
         </div>
 
@@ -85,6 +83,21 @@
 
     function doSubmit()
     {
+        if ($("#Name").val() == "") {
+            alert("请输入名称");
+            return;
+        }
+
+        if ($("#Price").val() == "") {
+            alert("请输入价格");
+            return;
+        }
+
+        if ($("#Description").val() == "") {
+            alert("请输入描述");
+            return;
+        }
+
         $("#frm").submit();
     }
 </script>
