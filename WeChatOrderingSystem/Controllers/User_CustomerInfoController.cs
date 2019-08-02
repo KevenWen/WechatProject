@@ -21,7 +21,7 @@ namespace WeChatHelloWorld1.Controllers
         }
 
         // GET: User_CustomerInfo/Details/5
-        public ActionResult Details(Guid? id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -46,11 +46,10 @@ namespace WeChatHelloWorld1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,WeChatOpenID,PhoneNumber,Address")] User_CustomerInfo user_CustomerInfo)
+        public ActionResult Create([Bind(Include = "WeChatOpenID,PhoneNumber,Address")] User_CustomerInfo user_CustomerInfo)
         {
             if (ModelState.IsValid)
             {
-                user_CustomerInfo.ID = Guid.NewGuid();
                 db.User_CustomerInfo.Add(user_CustomerInfo);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -60,7 +59,7 @@ namespace WeChatHelloWorld1.Controllers
         }
 
         // GET: User_CustomerInfo/Edit/5
-        public ActionResult Edit(Guid? id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -91,7 +90,7 @@ namespace WeChatHelloWorld1.Controllers
         }
 
         // GET: User_CustomerInfo/Delete/5
-        public ActionResult Delete(Guid? id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -108,7 +107,7 @@ namespace WeChatHelloWorld1.Controllers
         // POST: User_CustomerInfo/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(Guid id)
+        public ActionResult DeleteConfirmed(int? id)
         {
             User_CustomerInfo user_CustomerInfo = db.User_CustomerInfo.Find(id);
             db.User_CustomerInfo.Remove(user_CustomerInfo);
