@@ -45,10 +45,12 @@ namespace WeChatHelloWorld1.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        public ActionResult Create([Bind(Include = "ProductID,MerchantID,Name,Price,Status,ImagePath,Description,Created,LatestModify,Comment")] Product product)
+        public ActionResult Create([Bind(Include = "ProductID,Name,Price,Description,Comment")] Product product)
         {
             //if (ModelState.IsValid)
             //{
+            product.Status = "online";
+            product.MerchantID = 100;
                 db.Products.Add(product);
                 db.SaveChanges();
                 return RedirectToAction("Index");

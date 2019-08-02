@@ -17,16 +17,6 @@
       
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="weui-cell">
-            <div class="weui-cell__hd">
-                商家ID
-            </div>
-            
-            <div class="weui-cell__bd">
-                @Html.EditorFor(model => model.MerchantID, new { htmlAttributes = new { @class = "weui-input weui-rt-input" } })
-                @Html.ValidationMessageFor(model => model.MerchantID, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
         <div class="weui-cell">
             <div class="weui-cell__hd">
@@ -71,14 +61,6 @@
             </div>
         </div>
         <div class="weui-cell">
-            <div class="weui-cell__hd">
-                <label class="weui-label">商品名称 <span class="tips">*</span></label>
-            </div>
-            <div class="weui-cell__bd">
-                <input class="weui-input weui-rt-input" type="text" placeholder="">
-            </div>
-        </div>
-        <div class="weui-cell">
             <div class="weui-cell__bd">
                 <div class="weui-uploader">
                     <div class="weui-uploader__hd">
@@ -94,7 +76,7 @@
             </div>
         </div>
             <div class="weui-btn-area">
-                <a class="weui-btn weui-btn_primary" href="submit()" id="showDialog">确定</a>
+               <button type="submit">OK</button>
             </div> 
     </div>
 }
