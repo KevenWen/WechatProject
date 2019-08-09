@@ -20,21 +20,21 @@ namespace WeChatHelloWorld1.Controllers
             // 添加注册菜单
             bg.button.Add(new SingleViewButton()
             {
-                name = "注册",
-                url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect", AppId, Url.Encode("http://hightch.shareparking.net/Users/Create")),
+                name = "客户注册",
+                url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect", AppId, Url.Encode("http://hightch.shareparking.net/User_CustomerInfo/Create")),
                 type = MenuButtonType.view.ToString(), 
             });
             bg.button.Add(new SingleViewButton()
             {
-                name = "菜单",
-                url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect", AppId, Url.Encode("http://hightch.shareparking.net/Menu/")),
+                name = "商家注册",
+                url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect", AppId, Url.Encode("http://hightch.shareparking.net/User_MerchantInfo/Create")),
                 type = MenuButtonType.view.ToString(),
                 
             });
             bg.button.Add(new SingleViewButton()
             {
                 name = "我的订单",
-                url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect", AppId, Url.Encode("http://hightch.shareparking.net/Order/")),
+                url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect", AppId, Url.Encode("http://hightch.shareparking.net/CustomerOrders/Index")),
                 type = MenuButtonType.view.ToString(),
 
             });

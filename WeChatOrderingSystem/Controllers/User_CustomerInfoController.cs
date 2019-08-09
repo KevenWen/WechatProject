@@ -46,10 +46,11 @@ namespace WeChatHelloWorld1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "WeChatOpenID,PhoneNumber,Address")] User_CustomerInfo user_CustomerInfo)
+        public ActionResult Create([Bind(Include = "WeChatOpenID,CustomerName,PhoneNumber,Address")] User_CustomerInfo user_CustomerInfo)
         {
             if (ModelState.IsValid)
             {
+                // user_CustomerInfo.WeChatOpenID = "testopenid123451";
                 db.User_CustomerInfo.Add(user_CustomerInfo);
                 db.SaveChanges();
                 return RedirectToAction("Index");

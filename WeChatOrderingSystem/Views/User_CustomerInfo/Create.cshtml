@@ -8,7 +8,7 @@
 <h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm(null, null, FormMethod.Post, new { name = "frm", id = "frm" })) 
 {
     @Html.AntiForgeryToken()
     
@@ -17,10 +17,10 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.WeChatOpenID, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CustomerName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.WeChatOpenID, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.WeChatOpenID, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.CustomerName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CustomerName, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -42,7 +42,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <a class="weui-btn weui-btn_primary" href="javascript:doSubmit()" id="showDialog">确定</a>
             </div>
         </div>
     </div>
@@ -51,6 +51,28 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+<script>
+
+    function doSubmit() {
+        if ($("#CustomerName").val() == "") {
+            alert("请输入姓名");
+            return;
+        }
+
+        if ($("#PhoneNumber").val() == "") {
+            alert("请输入电话号码");
+            return;
+        }
+
+        if ($("#Address").val() == "") {
+            alert("请输入地址");
+            return;
+        }
+
+        $("#frm").submit();
+    }
+</script>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

@@ -17,12 +17,13 @@
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     @Html.HiddenFor(model => model.ID)
+    @Html.HiddenFor(model => model.WeChatOpenID)
 
     <div class="form-group">
-        @Html.LabelFor(model => model.WeChatOpenID, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.CustomerName, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.WeChatOpenID, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.WeChatOpenID, "", new { @class = "text-danger" })
+            @Html.EditorFor(model => model.CustomerName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.CustomerName, "", new { @class = "text-danger" })
         </div>
     </div>
 

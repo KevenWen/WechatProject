@@ -16,6 +16,9 @@ namespace WeChatHelloWorld1.Models
         public string WeChatOpenID { get; set; }
 
         [StringLength(50)]
+        public string CustomerName { get; set; }
+
+        [StringLength(50)]
         public string PhoneNumber { get; set; }
 
         [StringLength(100)]
