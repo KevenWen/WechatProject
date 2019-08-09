@@ -36,8 +36,15 @@ namespace WeChatHelloWorld1.Controllers
         }
 
         // GET: User_MerchantInfo/Create
-        public ActionResult Create()
+        public ActionResult Create(string code)
         {
+            if (code != null)
+            {
+                Authentication auth = new Authentication();
+                string errorMessage;
+                auth.UserInfoCallback(code, out errorMessage);
+                ViewBag.OpenID = Session["OpenID"].ToString();
+            }
             return View();
         }
 
@@ -51,6 +58,7 @@ namespace WeChatHelloWorld1.Controllers
             if (ModelState.IsValid)
             {
                 // user_MerchantInfo.WeChatOpenID = "testopenid123456";
+                user_MerchantInfo.WeChatOpenID = Session["OpenID"].ToString();
                 db.User_MerchantInfo.Add(user_MerchantInfo);
                 db.SaveChanges();
                 return RedirectToAction("Index");
