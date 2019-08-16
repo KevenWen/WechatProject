@@ -1,0 +1,86 @@
+﻿@model WeChatHelloWorld1.Models.CustomerOrderMaster
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>订单详情</h2>
+
+<div class="weui-content">
+    <hr />
+    <div class="weui-tab-content">
+        <div class="weui-panel weui-panel_orders">
+            <div class="weui-order__hd justify">
+                <div class="order-number">订单编号：@Html.DisplayFor(model => model.CustomerOrder.CustomerOrderID)</div>
+                <div class="order-time">订单时间：@Html.DisplayFor(model => model.StatueList[0].UpdateDate)</div>
+            </div>
+            <div class="weui-panel__bd weui-panel__tran">
+                <div class="weui-media-box weui-media-box_appmsg">
+                    <img class="weui-order__thumb" src="images/pic.png" alt="">
+                    <div class="weui-media-box__bd">
+                        <div class="order-cell ">
+                            <div class="order-title"><a href=""> @Html.DisplayFor(model => model.ProductList[0].Name)  </a></div>
+                            <div class="order-l">1</div>
+
+                        </div>
+                    </div>
+                    <div class="order-attr">
+                        <div class="price">￥@Html.DisplayFor(model => model.ProductList[0].Price) </div>
+                        <div class="number">×@Html.DisplayFor(model => model.ProductList[0].amount) </div>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-order__foot">
+                <div class="weui-order__action justify">
+                    <div class="order-price">
+                        @{ 
+                            var p = this.Model.ProductList.Sum(s => s.Price);
+
+                        }
+                        总计 <span class="n-price">￥@p</span>
+                    </div>
+                    <div class="btn-group">
+                        <a href="" class="weui-btn weui-btn-solid">取消</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="weui-form-preview">
+            <div class="weui-form-preview__hd">
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">配送信息</label>
+                    <a href="@Html.DisplayFor(model => model.CustomerOrder.CourierPhone)" class="label-contact"><span class="text">联系骑手</span><span class="cc"><i class="iconfont  icon-telphone"></i></span></a>
+                </div>
+            </div>
+            <div class="weui-form-preview__bd">
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">配送服务</label>
+                    <div class="weui-form-preview__value">百岛快送</div>
+                </div>
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">配送骑手</label>
+                    <div class="weui-form-preview__value">@Html.DisplayFor(model => model.CustomerOrder.CourierName)</div>
+                </div>
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">期望时间</label>
+                    <div class="weui-form-preview__value">2018.12.03 12:00:00</div>
+                </div>
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">配送地址</label>
+                    <div class="weui-form-preview__value">
+                        @Html.DisplayFor(model => model.CustomerOrder.CustomerName) @Html.DisplayFor(model => model.CustomerOrder.CustomerPhone)<br>
+                        @Html.DisplayFor(model => model.CustomerOrder.DeliveryAdress)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       
+ </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
