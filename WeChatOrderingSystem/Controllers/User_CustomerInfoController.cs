@@ -59,6 +59,9 @@ namespace WeChatHelloWorld1.Controllers
             {
                 user_CustomerInfo.WeChatOpenID = Session["OpenID"].ToString();
                 db.User_CustomerInfo.Add(user_CustomerInfo);
+                var wechatUser = db.WeChatUsers.Find(Session["OpenID"].ToString());
+                wechatUser.UserType = 1;
+                db.Entry(wechatUser).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
