@@ -447,14 +447,14 @@ QQ群：289181996
         /// 订阅（关注）事件
         /// </summary>
         /// <returns></returns>
-        //public override IResponseMessageBase OnEvent_SubscribeRequest(RequestMessageEvent_Subscribe requestMessage)
-        //{
-        //    var responseMessage = ResponseMessageBase.CreateFromRequestMessage<ResponseMessageText>(requestMessage);
-        //    responseMessage.Content = GetWelcomeInfo();
-        //    if (!string.IsNullOrEmpty(requestMessage.EventKey))
-        //    {
-        //        responseMessage.Content += "\r\n============\r\n场景值：" + requestMessage.EventKey;
-        //    }
+        public override IResponseMessageBase OnEvent_SubscribeRequest(RequestMessageEvent_Subscribe requestMessage)
+        {
+            var responseMessage = ResponseMessageBase.CreateFromRequestMessage<ResponseMessageText>(requestMessage);
+            responseMessage.Content = GetWelcomeInfo();
+            if (!string.IsNullOrEmpty(requestMessage.EventKey))
+            {
+                responseMessage.Content += "\r\n============\r\n场景值：" + requestMessage.EventKey;
+            }
 
         //    //推送消息
         //    //下载文档
@@ -481,8 +481,8 @@ QQ群：289181996
         //    }
 
 
-        //    return responseMessage;
-        //}
+            return responseMessage;
+        }
 
         /// <summary>
         /// 退订

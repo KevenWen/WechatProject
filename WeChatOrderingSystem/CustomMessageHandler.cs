@@ -600,7 +600,7 @@ MD5:{3}", requestMessage.Title, requestMessage.Description, requestMessage.FileT
             */
 
             var responseMessage = this.CreateResponseMessage<ResponseMessageText>();
-            responseMessage.Content = "这条消息来自DefaultResponseMessage。";
+            responseMessage.Content = "Hi, 你终于来了！ 欢迎关注Spotlight点餐系统。";
             return responseMessage;
         }
 
