@@ -9,6 +9,7 @@ namespace WeChatHelloWorld1.Models
     [Table("CustomerOrderProduct")]
     public partial class CustomerOrderProduct
     {
+        [Key]
         public int CustomerOrderProductID { get; set; }
 
         public int CustomerOrderID { get; set; }
@@ -33,5 +34,7 @@ namespace WeChatHelloWorld1.Models
         public string Comment { get; set; }
 
         public int MerchantID { get; set; }
+
+        public int? amount { get; set; }
     }
 }

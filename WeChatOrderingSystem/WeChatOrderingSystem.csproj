@@ -168,6 +168,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Authenticaton.cs" />
+    <Compile Include="Controllers\CustomerOrderMasterController.cs" />
     <Compile Include="Controllers\CustomerOrderProductsController.cs" />
     <Compile Include="Controllers\CustomerOrdersController.cs" />
     <Compile Include="Controllers\CustomerOrderStatuesController.cs" />
@@ -185,6 +186,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CustomerOrder.cs" />
+    <Compile Include="Models\CustomerOrderMaster.cs" />
     <Compile Include="Models\CustomerOrderProduct.cs" />
     <Compile Include="Models\CustomerOrderStatue.cs" />
     <Compile Include="Models\Product.cs" />
@@ -388,6 +390,8 @@
     <Content Include="Views\User_MerchantInfo\Details.cshtml" />
     <Content Include="Views\User_MerchantInfo\Edit.cshtml" />
     <Content Include="Views\User_MerchantInfo\Index.cshtml" />
+    <Content Include="Views\CustomerOrderMaster\Details.cshtml" />
+    <Content Include="Views\CustomerOrderMaster\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
