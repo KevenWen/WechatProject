@@ -253,7 +253,7 @@ namespace Senparc.Weixin.MP.Sample.CommonService.CustomMessageHandler
                     else
                     {
                         //退出APP测试
-                        defaultResponseMessage.Content = "您已经退出【盛派网络小助手】的测试程序。";
+                        defaultResponseMessage.Content = "欢迎使用测试程序。";
                     }
                     return defaultResponseMessage;
                 })
@@ -390,13 +390,6 @@ namespace Senparc.Weixin.MP.Sample.CommonService.CustomMessageHandler
                                     }
                                     result.AppendLine("\r\n");
                                 }
-
-                                result.AppendFormat("如果您在{0}分钟内连续发送消息，记录将被自动保留（当前设置：最多记录{1}条）。过期后记录将会自动清除。\r\n",
-                                    GlobalMessageContext.ExpireMinutes, GlobalMessageContext.MaxRecordCount);
-                                result.AppendLine("\r\n");
-                                result.AppendLine(
-                                    "您还可以发送【位置】【图片】【语音】【视频】等类型的信息（注意是这几种类型，不是这几个文字），查看不同格式的回复。\r\nSDK官方地址：https://sdk.weixin.senparc.com");
-
                                 defaultResponseMessage.Content = result.ToString();
                             }
                             break;
@@ -600,7 +593,7 @@ MD5:{3}", requestMessage.Title, requestMessage.Description, requestMessage.FileT
             */
 
             var responseMessage = this.CreateResponseMessage<ResponseMessageText>();
-            responseMessage.Content = "Hi, 你终于来了！ 欢迎关注Spotlight点餐系统。";
+            responseMessage.Content = "Hey, 你终于来了！ 欢迎酷酷的你关注XX点餐系统。";
             return responseMessage;
         }
 

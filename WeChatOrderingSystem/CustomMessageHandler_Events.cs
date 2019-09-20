@@ -450,7 +450,7 @@ QQ群：289181996
         public override IResponseMessageBase OnEvent_SubscribeRequest(RequestMessageEvent_Subscribe requestMessage)
         {
             var responseMessage = ResponseMessageBase.CreateFromRequestMessage<ResponseMessageText>(requestMessage);
-            responseMessage.Content = GetWelcomeInfo();
+            responseMessage.Content = "Hey, 你终于来了！ 欢迎酷酷的你关注XX点餐系统。";
             if (!string.IsNullOrEmpty(requestMessage.EventKey))
             {
                 responseMessage.Content += "\r\n============\r\n场景值：" + requestMessage.EventKey;
