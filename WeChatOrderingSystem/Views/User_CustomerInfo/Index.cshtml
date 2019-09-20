@@ -1,36 +1,31 @@
 ﻿@model IEnumerable<WeChatHelloWorld1.Models.User_CustomerInfo>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "用户信息";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>用户信息</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("创建用户", "Create")
 </p>
+</br>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.WeChatOpenID)
+            用户名称
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CustomerName)
+            联系电话
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Address)
+            联系地址
         </th>
     </tr>
 
 @foreach (var item in Model) {
 <tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.WeChatOpenID)
-    </td>
     <td>
         @Html.DisplayFor(modelItem => item.CustomerName)
     </td>
@@ -41,9 +36,9 @@
         @Html.DisplayFor(modelItem => item.Address)
     </td>
     <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+        @Html.ActionLink("编辑", "Edit", new { id = item.ID }) |
+        @Html.ActionLink("详情", "Details", new { id = item.ID }) |
+        @Html.ActionLink("删除", "Delete", new { id = item.ID })
     </td>
 </tr>
 }

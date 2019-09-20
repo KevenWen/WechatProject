@@ -1,26 +1,17 @@
 ﻿@model WeChatHelloWorld1.Models.User_CustomerInfo
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "用户详情";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>用户详情</h2>
 
 <div>
-    <h4>User_CustomerInfo</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.WeChatOpenID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.WeChatOpenID)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CustomerName)
+            用户名称
         </dt>
 
         <dd>
@@ -28,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
+            联系电话
         </dt>
 
         <dd>
@@ -36,7 +27,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Address)
+            联系地址
         </dt>
 
         <dd>
@@ -45,6 +36,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("编辑", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("返回用户列表", "Index")
 </p>

@@ -1,58 +1,61 @@
 ﻿@model WeChatHelloWorld1.Models.User_MerchantInfo
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "编辑商家信息";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
+<h2>编辑商家信息</h2>
 
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
-<div class="form-horizontal">
-    <h4>User_MerchantInfo</h4>
+<div class="weui-cells weui-cells_form">
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     @Html.HiddenFor(model => model.ID)
     @Html.HiddenFor(model => model.WeChatOpenID)
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.MerchantName, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            商家名字
+        </div>
+        <div class="weui-cell__hd">
             @Html.EditorFor(model => model.MerchantName, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.MerchantName, "", new { @class = "text-danger" })
         </div>
     </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.MerchantAddress, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            商家地址
+        </div>
+        <div class="weui-cell__hd">
             @Html.EditorFor(model => model.MerchantAddress, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.MerchantAddress, "", new { @class = "text-danger" })
         </div>
     </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            商家联系电话
+        </div>
+        <div class="weui-cell__hd">
             @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
         </div>
     </div>
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Save" class="btn btn-default" />
-        </div>
+    <div class="weui-btn-area">
+        <input type="submit" value="保存" class="weui-btn weui-btn_primary" />
     </div>
 </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("返回列表", "Index")
 </div>
 
 @section Scripts {
