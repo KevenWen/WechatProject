@@ -4,52 +4,51 @@
     ViewBag.Title = "商家注册";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+</br>
 <h2>商家注册</h2>
+</br></br>
 
 
-@using (Html.BeginForm(null, null, FormMethod.Post, new { name = "frm", id = "frm" })) 
+@using (Html.BeginForm(null, null, FormMethod.Post, new { name = "frm", id = "frm" }))
 {
     @Html.AntiForgeryToken()
-    
-    <div class="weui-cells weui-cells_form">
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-        <div class="weui-cell">
-            <div class="weui-cell__hd">
-                商家名字&nbsp;&nbsp;
-            </div>
-            <div class="weui-cell__hd">
-                @Html.EditorFor(model => model.MerchantName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.MerchantName, "", new { @class = "text-danger" })
-            </div>
+<div class="weui-cells weui-cells_form">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">商家名字 <span class="tips">*</span></label>
         </div>
-
-        <div class="weui-cell">
-            <div class="weui-cell__hd">
-                商家地址&nbsp;&nbsp;
-            </div>
-            <div class="weui-cell__hd">
-                @Html.EditorFor(model => model.MerchantAddress, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.MerchantAddress, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="weui-cell">
-            <div class="weui-cell__hd">
-                商家联系电话&nbsp;&nbsp;
-            </div>
-            <div class="weui-cell__hd">
-                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="weui-btn-area">
-            <a class="weui-btn weui-btn_primary" href="javascript:doSubmit()" id="showDialog">确定</a>
+        <div class="weui-cell__hd">
+            @Html.EditorFor(model => model.MerchantName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.MerchantName, "", new { @class = "text-danger" })
         </div>
     </div>
+
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">商家地址 <span class="tips">*</span></label>
+        </div>
+        <div class="weui-cell__hd">
+            @Html.EditorFor(model => model.MerchantAddress, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.MerchantAddress, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">联系电话 <span class="tips">*</span></label>
+        </div>
+        <div class="weui-cell__hd">
+            @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="weui-btn-area">
+        <a class="weui-btn weui-btn_primary" href="javascript:doSubmit()" id="showDialog">确定</a>
+    </div>
+</div>
 }
 
 <div>
