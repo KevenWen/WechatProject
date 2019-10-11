@@ -17,7 +17,14 @@ namespace WeChatHelloWorld1.Controllers
         // GET: CustomerOrderMaster
         public ActionResult Index()
         {
-            return View();
+            var orderList = db.CustomerOrders.ToList();
+            List<CustomerOrderMaster> oMlist = new List<CustomerOrderMaster>();
+            foreach (CustomerOrder o in orderList)
+            {
+                var temp = new CustomerOrderMaster() { CustomerOrder = o };
+                oMlist.Add(temp);
+            }
+            return View(oMlist);
         }
 
         // GET: CustomerOrderMaster/Details/5

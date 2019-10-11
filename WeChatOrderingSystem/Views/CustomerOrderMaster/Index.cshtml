@@ -1,11 +1,11 @@
-﻿@model IEnumerable<WeChatHelloWorld1.Models.View_CustomerOrderMaster>
+﻿@model IEnumerable<WeChatHelloWorld1.Models.CustomerOrderMaster>
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>我的订单</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -13,58 +13,40 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ImagePath)
+            @Html.DisplayNameFor(model => model.CustomerOrder.MerchantID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Created)
+            @Html.DisplayNameFor(model => model.CustomerOrder.CustomerName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LatestModify)
+            @Html.DisplayNameFor(model => model.CustomerOrder.CustomerPhone)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ProductComment)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CourierPhone)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CourierName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StatueComment)
+            @Html.DisplayNameFor(model => model.CustomerOrder.DeliveryAdress)
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ImagePath)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Created)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LatestModify)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProductComment)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CourierPhone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CourierName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StatueComment)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerOrder.MerchantID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerOrder.CustomerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerOrder.CustomerPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerOrder.DeliveryAdress)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
 
 </table>
