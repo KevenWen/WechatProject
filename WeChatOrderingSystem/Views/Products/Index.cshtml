@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<WeChatHelloWorld1.Models.Product>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "菜单列表";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+    <h2>菜单列表</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("下单", "Details", new { id = 5 })
 </p>
 <table class="table">
     <tr>
@@ -41,11 +41,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Status)
         </td>
-        <td>
-            @*@Html.ActionLink("Edit", "Edit", new { id=item.ProductID }) |*@
-            @Html.ActionLink("Details", "Details", new { id=item.ProductID }) |
-            @*@Html.ActionLink("Delete", "Delete", new { id=item.ProductID })*@
-        </td>
+
     </tr>
 }
 

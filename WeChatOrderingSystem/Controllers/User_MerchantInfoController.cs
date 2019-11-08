@@ -48,6 +48,11 @@ namespace WeChatHelloWorld1.Controllers
             return View();
         }
 
+        public ActionResult Add(int? id)
+        {
+            return RedirectToAction("Create", "Products", id);
+        }
+
         // POST: User_MerchantInfo/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -61,7 +66,8 @@ namespace WeChatHelloWorld1.Controllers
                 user_MerchantInfo.WeChatOpenID = Session["OpenID"].ToString();
                 db.User_MerchantInfo.Add(user_MerchantInfo);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", new { id = user_MerchantInfo.ID });
+
             }
 
             return View(user_MerchantInfo);
