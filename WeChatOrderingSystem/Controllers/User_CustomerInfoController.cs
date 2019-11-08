@@ -63,7 +63,7 @@ namespace WeChatHelloWorld1.Controllers
                 wechatUser.UserType = 1;
                 db.Entry(wechatUser).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Details", new { id = user_CustomerInfo.ID });
+                return RedirectToAction("Index", "Products", new { id = user_CustomerInfo.ID });
             }
 
             return View(user_CustomerInfo);
