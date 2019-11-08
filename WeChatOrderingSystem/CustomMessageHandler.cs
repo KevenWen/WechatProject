@@ -593,7 +593,7 @@ MD5:{3}", requestMessage.Title, requestMessage.Description, requestMessage.FileT
             */
 
             var responseMessage = this.CreateResponseMessage<ResponseMessageText>();
-            responseMessage.Content = "Hey, 你终于来了！ 欢迎酷酷的你关注XX点餐系统。";
+            responseMessage.Content = "欢迎使用XX点餐系统!";
             return responseMessage;
         }
 
